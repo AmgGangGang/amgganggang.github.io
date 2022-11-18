@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>My Homepage</title>
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <link
+      rel="stylesheet"
+      href="./layui/css/layui.css"
+      tppabs="https://www.layui.site/layui/dist/css/layui.css"
+      media="all"
+    />
+    <!-- <link
+      href=" https://fonts.googleapis.com/css?family=Lato:100"
+      rel="stylesheet"
+    /> -->
+    <link rel="stylesheet" href="./layui/css/layui.css" />
+    <script src="./layui/layui.js"></script>
+    <link rel="stylesheet" href="./css/index.css" type="text/css" />
+    <link rel="stylesheet" href="./css/nav.css" type="text/css" />
+    <link
+      rel="icon"
+      href="https://ssl.gstatic.com/atari/images/public/favicon.ico"
+    />
+  </head>
+  <body>
+    <div class="layui-row header scrollHeader" id="header">
+      <div class="layui-col-xs1 menu-icon minNav">
+        <div class="menu minNav"></div>
+      </div>
+      <div class="layui-col-xs3 maxNav">
+        <div class="grid-demo grid-demo-bg1 navname">MY NAME</div>
+      </div>
+      <div class="layui-col-xs11 minNav">
+        <div class="grid-demo grid-demo-bg1 navname">MY NAME</div>
+      </div>
+      <div class="layui-col-xs9 maxNav">
+        <div class="grid-demo">
+          <ul class="layui-nav">
+            <li class="layui-nav-item layui-this">
+              <a href="" class="navInfo">About</a>
+            </li>
+            <li class="layui-nav-item">
+              <a onclick="openPdf('./static/examplea.pdf')" class="navInfo"
+                >Curriculum Vitae</a
+              >
+            </li>
+            <li class="layui-nav-item" onclick="showMain('research')">
+              <a href="javascript:;" class="navInfo">Research</a>
+            </li>
+            <li class="layui-nav-item" onclick="showMain('teaching')">
+              <a class="navInfo">Teaching</a>
+            </li>
+            <li class="layui-nav-item" onclick="showMain('misc')">
+              <a class="navInfo">Misc</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- <div class="layui-col-xs3" id="minNav" style="float: right">
+        <div class="grid-demo2">
+          <ul class="layui-nav">
+            <li class="layui-nav-item">
+              <a href="javascript:;" class="navinfo">More</a>
+              <dl class="layui-nav-child">
+                <dd><a href="">About</a></dd>
+                <dd>
+                  <a
+                    href="https://raw.githubusercontent.com/AmgGangGang/demo2/main/static/examplea.pdf"
+                    >Curriculum Vitae</a
+                  >
+                </dd>
+                <dd onclick="showMain('research')"><a>Research</a></dd>
+                <dd onclick="showMain('teaching')"><a>Teaching</a></dd>
+                <dd onclick="showMain('misc')"><a>Misc</a></dd>
+              </dl>
+            </li>
+          </ul>
+        </div>
+      </div> -->
+
+      <div id="side-menu">
+        <div class="close">
+          <i
+            class="layui-icon layui-icon-close layui-anim layui-anim-rotate"
+          ></i>
+        </div>
+        <ul class="nav">
+          <li class="nav-item">
+            <a onclick="showMain('about')" style="color: #49aad4">About</a>
+          </li>
+          <li class="nav-item">
+            <a onclick="openPdf('./static/examplea.pdf')">Curriculum Vitae</a>
+          </li>
+          <li class="nav-item" onclick="showMain('research')">
+            <a href="javascript:;">Research</a>
+          </li>
+          <li class="nav-item" onclick="showMain('teaching')">
+            <a>Teaching</a>
+          </li>
+          <li class="nav-item" onclick="showMain('misc')">
+            <a>Misc</a>
+          </li>
+        </ul>
+        <div id="side-menu-inner"></div>
+      </div>
+      <!-- <hr /> -->
+    </div>
+    <div id="about" class="main" class="layui-col-md7">
+      <div class="layui-row grid-demo grid-demo-bg1 layui-anim layui-anim-up">
+        <div class="layui-col-md12">
+          <div class="grid-demo"><h1 id="myname">MY NAME</h1></div>
+          <p>
+            Quant Marketing Ph.D. Candidate - on the Job Market. Empirical
+            Researcher, Husband & Dad.
+          </p>
+        </div>
+        <div class="layui-col-md3 layui-anim layui-anim-down">
+          <div class="grid-demo grid-demo-bg2">
+            <img src="./static/intr.jpeg" />
+          </div>
+        </div>
+        <div class="layui-col-md9 layui-anim layui-anim-up">
+          <div class="grid-demo grid-demo-bg3" id="intro">
+            <div>
+              <p>
+                Welcome to my website! I am a 6th-year Ph.D. Candidate in
+                Quantitative Marketing at
+                <a href="https://www.rotman.utoronto.ca/" style="color: #007bff"
+                  >Rotman School of Management</a
+                >, University of Toronto.
+              </p>
+              <p>
+                My research interests are the Economics of Platforms and
+                Algorithms. I have implemented a variety of empirical methods,
+                such as causal inference, structural modeling, and machine
+                learning/deep learning methods in my research, and I have
+                actively collaborated with colleagues in consumer behavior track
+                and researchers in med/law schools.
+              </p>
+              <p>
+                My research interests are the Economics of Platforms and
+                Algorithms. I have implemented a variety of empirical methods,
+                such as causal inference, structural modeling, and machine
+                learning/deep learning methods in my research, and I have
+                actively collaborated with colleagues in consumer behavior track
+                and researchers in med/law schools.
+              </p>
+              <p>
+                My research interests are the Economics of Platforms and
+                Algorithms. I have implemented a variety of empirical methods,
+                such as causal inference, structural modeling, and machine
+                learning/deep learning methods in my research, and I have
+                actively collaborated with colleagues in consumer behavior track
+                and researchers in med/law schools.
+              </p>
+              <p>
+                My research interests are the Economics of Platforms and
+                Algorithms. I have implemented a variety of empirical methods,
+                such as causal inference, structural modeling, and machine
+                learning/deep learning methods in my research, and I have
+                actively collaborated with colleagues in consumer behavior track
+                and researchers in med/law schools.
+              </p>
+              <p>
+                My research interests are the Economics of Platforms and
+                Algorithms. I have implemented a variety of empirical methods,
+                such as causal inference, structural modeling, and machine
+                learning/deep learning methods in my research, and I have
+                actively collaborated with colleagues in consumer behavior track
+                and researchers in med/law schools.
+              </p>
+              <p>
+                My research interests are the Economics of Platforms and
+                Algorithms. I have implemented a variety of empirical methods,
+                such as causal inference, structural modeling, and machine
+                learning/deep learning methods in my research, and I have
+                actively collaborated with colleagues in consumer behavior track
+                and researchers in med/law schools.
+              </p>
+              <p>
+                My research interests are the Economics of Platforms and
+                Algorithms. I have implemented a variety of empirical methods,
+                such as causal inference, structural modeling, and machine
+                learning/deep learning methods in my research, and I have
+                actively collaborated with colleagues in consumer behavior track
+                and researchers in med/law schools.
+              </p>
+              <p>
+                My research interests are the Economics of Platforms and
+                Algorithms. I have implemented a variety of empirical methods,
+                such as causal inference, structural modeling, and machine
+                learning/deep learning methods in my research, and I have
+                actively collaborated with colleagues in consumer behavior track
+                and researchers in med/law schools.
+              </p>
+              <p>
+                My research interests are the Economics of Platforms and
+                Algorithms. I have implemented a variety of empirical methods,
+                such as causal inference, structural modeling, and machine
+                learning/deep learning methods in my research, and I have
+                actively collaborated with colleagues in consumer behavior track
+                and researchers in med/law schools.
+              </p>
+              <p>
+                My research interests are the Economics of Platforms and
+                Algorithms. I have implemented a variety of empirical methods,
+                such as causal inference, structural modeling, and machine
+                learning/deep learning methods in my research, and I have
+                actively collaborated with colleagues in consumer behavior track
+                and researchers in med/law schools.
+              </p>
+              <p>
+                My research interests are the Economics of Platforms and
+                Algorithms. I have implemented a variety of empirical methods,
+                such as causal inference, structural modeling, and machine
+                learning/deep learning methods in my research, and I have
+                actively collaborated with colleagues in consumer behavior track
+                and researchers in med/law schools.
+              </p>
+              <p>
+                My research interests are the Economics of Platforms and
+                Algorithms. I have implemented a variety of empirical methods,
+                such as causal inference, structural modeling, and machine
+                learning/deep learning methods in my research, and I have
+                actively collaborated with colleagues in consumer behavior track
+                and researchers in med/law schools.
+              </p>
+              <p>I am on the academic job market this Summer/Fall of 2022.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <iframe id="one" src="nav.html" frameborder="0" width="100%" height="60px"frameborder="0"></iframe> -->
+
+    <div id="research" class="main" hidden>
+      <div class="post">
+        <header class="post-header">
+          <h1 class="post-title">Research</h1>
+          <p class="post-description"></p>
+        </header>
+        <article>
+          <h3 id="working-papers">Working Papers</h3>
+          <p>
+            <strong
+              >Product Development and Platform Design (Job Market
+              Paper)</strong
+            >
+          </p>
+          <ul>
+            <li>
+              Winner, ISMS Doctoral Dissertation Proposal Competition, 2021
+            </li>
+            <li>
+              Winner, PDMA Doctoral Dissertation Proposal Competition, 2022
+            </li>
+          </ul>
+          <p>
+            <strong
+              >Peer Effects from Friends and Strangers: Evidence from Random
+              Matchmaking in an Online Game</strong
+            >
+            (with Daniel Goetz)<br />
+            <a
+              style="color: #007bff"
+              href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4116806"
+              target="_blank"
+              rel="noopener noreferrer"
+              >[Working Paper at SSRN]</a
+            >
+            <em>Under review at Management Science</em>
+          </p>
+          <p>
+            <strong>Increasing App Engagement with Peak-End Effects</strong>
+            (with Daniel Goetz)
+          </p>
+          <p>
+            <strong
+              >Evaluation Inflation: Consumers Give Higher Product Ratings on
+              Transaction Sites than Non-transaction Sites</strong
+            >
+            (with Claire Tsai and Ying Zeng)
+            <em>Revise and Resubmit at Journal of Marketing Research</em>
+          </p>
+        </article>
+      </div>
+    </div>
+
+    <div id="teaching" class="main" hidden>
+      <div class="post">
+        <header class="post-header">
+          <h1 class="post-title">Teaching</h1>
+          <p class="post-description"></p>
+        </header>
+        <article>
+          <p>
+            I have been working as a teaching assistant and a project coach
+            during my Ph.D. for a variety of courses at both undergraduate and
+            graduate levels:
+          </p>
+          <p><strong>Undergraduate</strong></p>
+          <ul>
+            <li>RSM250 Principles of Marketing - Zachary Zhong</li>
+            <li>RSM353 Consumer Behaviour - Scott Hawkins</li>
+            <li>MGT355 Pricing - Matthew Osborne</li>
+          </ul>
+          <p><strong>Master of Management Analytics</strong></p>
+          <ul>
+            <li>
+              RSM8432 Management Analytics Practicum (Project Coach) - Dmitry
+              Krass
+            </li>
+            <li>RSM8522 Analytics for Marketing Strategy - Nitin Mehta</li>
+            <li>MMI1020 Introduction to Big Data Analysis - Daniel Goetz</li>
+          </ul>
+          <p><strong>Master of Business Administration</strong></p>
+          <ul>
+            <li>RSM1282 Statistics for Management - Sridhar Moorthy</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+
+    <div id="misc" class="main" hidden>
+      <div class="post">
+        <header class="post-header">
+          <h1 class="post-title">Misc</h1>
+          <p class="post-description"></p>
+        </header>
+        <article>
+          <p><strong>Fun facts about me</strong></p>
+          <ul>
+            <li>
+              Every city I spent most of my time living in is not far from
+              <a
+                href="https://en.wikipedia.org/wiki/40th_parallel_north"
+                target="_blank"
+                rel="noopener noreferrer"
+                >40°0′N</a
+              >
+            </li>
+            <li>
+              From Beijing –&gt; Toulouse –&gt; Toronto, I have traveled all the
+              way to the west since my undergrad (<a
+                href="https://en.wikipedia.org/wiki/Journey_to_the_West"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Journey to the West</a
+              >, yes!)
+            </li>
+            <li>
+              All schools I have attended have logos with similar shades of
+              blue:
+              <a
+                href="https://upload.wikimedia.org/wikipedia/en/b/bb/Central_University_of_Finance_and_Economics_Logo.png"
+                target="_blank"
+                rel="noopener noreferrer"
+                >CUFE</a
+              >,
+              <a
+                href="https://upload.wikimedia.org/wikipedia/commons/7/7f/Logo_Toulouse_School_of_Economics.png"
+                target="_blank"
+                rel="noopener noreferrer"
+                >TSE</a
+              >,
+              <a
+                href="https://en.wikipedia.org/wiki/University_of_Toronto#/media/File:Utoronto_coa.svg"
+                target="_blank"
+                rel="noopener noreferrer"
+                >UofT</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://guanlanh.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Amazing Researcher in Nutrition Sciences</a
+              >
+            </li>
+          </ul>
+        </article>
+      </div>
+    </div>
+
+    <script>
+      layui.use("element", function () {
+        var element = layui.element;
+
+        element.on("nav(demo)", function (elem) {
+          layer.msg(elem.text());
+        });
+      });
+      layui.use("jquery", function () {
+        var $ = layui.$;
+
+        window.showMain = function (obj) {
+          var arr = ["research", "teaching", "misc"];
+          arr.splice(arr.indexOf(obj), 1);
+          $("#about").hide();
+          var id = "#" + obj;
+          $(id).show();
+          for (var a of arr) {
+            var temp = "#" + a;
+            $(temp).hide();
+          }
+        };
+
+        window.openPdf = function (uul) {
+          layui.use("layer", function () {
+            var layer = layui.layer;
+            layer.open({
+              type: 2,
+              area: ["1000px", "750px"],
+              fixed: false,
+              maxmin: true,
+              content: uul,
+            });
+          });
+        };
+
+        $(".nav-item").on("click", function () {
+          $(".nav-item").children().css("color", "white");
+          $(this).children().css("color", "#49AAD4");
+        });
+
+        $(".menu-icon").on("click", function () {
+          $(".layui-icon-close").addClass("layui-anim-loop");
+          setTimeout(() => {
+            $(".layui-icon-close").removeClass("layui-anim-loop");
+          }, 500);
+        });
+
+        $(window).scroll(function () {
+          if ($(document).scrollTop() >= 100) {
+            $("#header").removeClass("header").addClass("scrollHeader");
+          } else {
+            $("#header").removeClass("scrollHeader").addClass("header");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,136 @@
+.layui-nav {
+    float: right;
+    height: 56px;
+    background: #ffffff;
+    margin-right: 2rem;
+ 
+  }
+.header .navInfo {
+  color: #808080 !important;
+}
+.scrollHeader .navInfo {
+  color: white !important;
+}
+.navInfo {
+  height: 56px;
+}
+#header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+}
+.scrollHeader *{
+   background-color: #2B2B2B;
+   color: white;
+}
+.layui-nav .layui-this:after,
+.layui-nav-bar {
+  background: gray;
+}
+.navname {
+  line-height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+  margin-bottom: 0px;
+  font-family: Lato;
+  /* color: #212121; */
+}
+.maxNav .navname {
+}
+.minNav .navname {
+  margin-left: 10px;
+}
+
+/* side */
+#side-menu {
+  background-color: #212121;
+  color: white;
+  display: block;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  width: 250px;
+  transition: transform 260ms ease-in;
+  transform: translateX(calc(-100% + 0px));
+}
+.menu-icon:hover ~ #side-menu {
+  transform: translateX(0px);
+  
+}
+#side-menu-inner {
+  display: block;
+  height: 100%;
+  width: calc(100% - 24px);
+  /* background-color: #212121; */
+}
+
+
+.menu{
+  padding: 3px 0;
+  width: 19px;
+  height: 3px;
+  background: #808080;
+  background-clip: content-box; 
+  border-top: 3px solid #808080;
+  border-bottom: 3px solid #808080;
+  border-radius: 4%;
+}
+
+.menu-icon {
+  height:  56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#side-menu * {
+  background-color: #212121;
+  color: white;
+}
+
+.layui-icon-close {
+  font-size: 24px !important;
+}
+.close {
+  padding-top: 0.85rem;
+  padding-left: 0.6rem;
+}
+.nav {
+  margin-top: 1.5rem;
+}
+.nav-item {
+  list-style: none;
+}
+
+@media (max-width: 768px) {
+  .minNav {
+    display: flex;
+  }
+  .maxNav {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .minNav {
+    display: none;
+  }
+  .maxNav {
+    display: inline;
+  }
+}
+/* @media (min-width: 992px) {
+}
+@media (max-width: 1200px) {
+} */
+
+
+/* latin */
+@font-face {
+  font-family:Lato;
+  src:url("../static/Lato-Thin.ttf");
+  color: black !important;
+}
