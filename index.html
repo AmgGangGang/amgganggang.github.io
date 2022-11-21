@@ -21,6 +21,7 @@
     /> -->
     <link rel="stylesheet" href="./layui/css/layui.css" />
     <script src="./layui/layui.js"></script>
+    <script src="./js/index.js"></script>
     <link rel="stylesheet" href="./css/index.css" type="text/css" />
     <link rel="stylesheet" href="./css/nav.css" type="text/css" />
     <link
@@ -63,28 +64,6 @@
         </div>
       </div>
 
-      <!-- <div class="layui-col-xs3" id="minNav" style="float: right">
-        <div class="grid-demo2">
-          <ul class="layui-nav">
-            <li class="layui-nav-item">
-              <a href="javascript:;" class="navinfo">More</a>
-              <dl class="layui-nav-child">
-                <dd><a href="">About</a></dd>
-                <dd>
-                  <a
-                    href="https://raw.githubusercontent.com/AmgGangGang/demo2/main/static/examplea.pdf"
-                    >Curriculum Vitae</a
-                  >
-                </dd>
-                <dd onclick="showMain('research')"><a>Research</a></dd>
-                <dd onclick="showMain('teaching')"><a>Teaching</a></dd>
-                <dd onclick="showMain('misc')"><a>Misc</a></dd>
-              </dl>
-            </li>
-          </ul>
-        </div>
-      </div> -->
-
       <div id="side-menu">
         <div class="close">
           <i
@@ -96,7 +75,10 @@
             <a onclick="showMain('about')" style="color: #49aad4">About</a>
           </li>
           <li class="nav-item">
-            <a onclick="openPdf('./static/examplea.pdf')">Curriculum Vitae</a>
+            <a
+              href="https://github.com/AmgGangGang/amgganggang.github.io/raw/main/static/examplea.pdf"
+              >Curriculum Vitae</a
+            >
           </li>
           <li class="nav-item" onclick="showMain('research')">
             <a href="javascript:;">Research</a>
@@ -112,7 +94,7 @@
       </div>
       <!-- <hr /> -->
     </div>
-    <div id="about" class="main" class="layui-col-md7">
+    <div id="about" class="main">
       <div class="layui-row grid-demo grid-demo-bg1 layui-anim layui-anim-up">
         <div class="layui-col-md12">
           <div class="grid-demo"><h1 id="myname">MY NAME</h1></div>
@@ -389,63 +371,5 @@
         </article>
       </div>
     </div>
-
-    <script>
-      layui.use("element", function () {
-        var element = layui.element;
-
-        element.on("nav(demo)", function (elem) {
-          layer.msg(elem.text());
-        });
-      });
-      layui.use("jquery", function () {
-        var $ = layui.$;
-
-        window.showMain = function (obj) {
-          var arr = ["research", "teaching", "misc"];
-          arr.splice(arr.indexOf(obj), 1);
-          $("#about").hide();
-          var id = "#" + obj;
-          $(id).show();
-          for (var a of arr) {
-            var temp = "#" + a;
-            $(temp).hide();
-          }
-        };
-
-        window.openPdf = function (uul) {
-          layui.use("layer", function () {
-            var layer = layui.layer;
-            layer.open({
-              type: 2,
-              area: ["1000px", "750px"],
-              fixed: false,
-              maxmin: true,
-              content: uul,
-            });
-          });
-        };
-
-        $(".nav-item").on("click", function () {
-          $(".nav-item").children().css("color", "white");
-          $(this).children().css("color", "#49AAD4");
-        });
-
-        $(".menu-icon").on("click", function () {
-          $(".layui-icon-close").addClass("layui-anim-loop");
-          setTimeout(() => {
-            $(".layui-icon-close").removeClass("layui-anim-loop");
-          }, 500);
-        });
-
-        $(window).scroll(function () {
-          if ($(document).scrollTop() >= 100) {
-            $("#header").removeClass("header").addClass("scrollHeader");
-          } else {
-            $("#header").removeClass("scrollHeader").addClass("header");
-          }
-        });
-      });
-    </script>
   </body>
 </html>

@@ -57,11 +57,12 @@
   width: 250px;
   transition: transform 260ms ease-in;
   transform: translateX(calc(-100% + 0px));
+  /* transform: translateX(0px); */
 }
-.menu-icon:hover ~ #side-menu {
+/* .menu-icon:hover ~ #side-menu {
   transform: translateX(0px);
   
-}
+} */
 #side-menu-inner {
   display: block;
   height: 100%;
