@@ -9,9 +9,8 @@ layui.use("jquery", function () {
   var $ = layui.$;
 
   window.showMain = function (obj) {
-    var arr = ["research", "teaching", "misc"];
+    var arr = ["about", "research", "teaching", "misc"];
     arr.splice(arr.indexOf(obj), 1);
-    $("#about").hide();
     var id = "#" + obj;
     $(id).show();
     for (var a of arr) {
